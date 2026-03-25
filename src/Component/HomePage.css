@@ -1,0 +1,332 @@
+h2 {
+    color: brown;
+}
+
+/* ── NAV ── */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* IMPORTANT */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #03031C;
+    padding: 15px 40px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hide */
+.nav.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Show */
+.nav.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* remove spacer issue */
+.nav-spacer {
+    height: 0 !important;
+}
+
+/* ── MAIN ── */
+.main {
+    background-color: #03031C;
+    width: 100%;
+    padding: 0 40px 15px 40px;
+    height: max-content; /* 🔥 scroll create */
+}
+
+/* ── SEARCH ── */
+.search input {
+    width: 700px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #0E0E0E;
+    padding: 0 10px;
+    box-shadow: 0 4px 8px rgb(236, 236, 236);
+    transition: all 0.4s ease;
+}
+
+.search input:hover {
+    box-shadow: 0 6px 12px rgb(231, 68, 231);
+    transform: translateY(-2px);
+}
+
+/* ── LOGO ── */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ── MENU ── */
+.menu {
+    display: flex;
+    gap: 25px;
+    color: white;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    transform: translateY(-2px);
+    color: rgb(231, 68, 231);
+}
+
+/* ── BUTTON ── */
+.button {
+    color: white;
+    background: rgb(73, 26, 121) !important;
+    border-radius: 25px;
+    padding: 6px 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    border: none !important;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgb(229, 226, 232);
+}
+
+/* ── CAROUSEL ── */
+.movie-carousel img {
+    height: 600px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.movie-carousel .carousel-caption {
+    left: 50px;
+    right: auto;
+    text-align: left;
+    bottom: 150px;
+}
+
+.d-block {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgb(236, 236, 236);
+    transition: all 0.4s ease-in;
+}
+
+.d-block:hover {
+    box-shadow: 0 6px 12px rgb(231, 68, 231);
+    transform: translateY(2px);
+}
+
+/* ── HERO TEXT ── */
+.hero-text {
+    text-align: left;
+    left: 0;
+    bottom: 0;
+}
+
+.hero-text h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    width: 500px;
+}
+
+/* ── BUTTON ── */
+.ticket-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.ticket-btn:hover {
+    transform: translateY(-5px);
+    color: black;
+}
+
+/* ============================================
+   MOBILE (≤ 480px)
+   ============================================ */
+@media (max-width: 480px) {
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 12px;
+    }
+
+    .main {
+        padding: 0 12px 10px 12px;
+        overflow-x: hidden;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .movie-carousel img {
+        height: 220px;
+        border-radius: 10px;
+    }
+
+    .movie-carousel .carousel-caption {
+        left: 12px;
+        bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        width: 90%;
+        font-size: 13px;
+    }
+
+    .ticket-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+}
+
+/* ============================================
+   TABLET (481px – 768px)
+   ============================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 20px;
+    }
+
+    .main {
+        padding: 0 20px 12px 20px;
+        overflow-x: hidden;
+    }
+
+    .search input {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .menu a,
+    .button {
+        font-size: 13px;
+    }
+
+    .movie-carousel img {
+        height: 350px;
+    }
+
+    .movie-carousel .carousel-caption {
+        left: 20px;
+        bottom: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        width: 75%;
+        font-size: 14px;
+    }
+
+    .ticket-btn {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   LARGE TABLET (769px – 900px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 900px) {
+
+    .nav {
+        padding: 14px 28px;
+    }
+
+    .main {
+        padding: 0 28px 14px 28px;
+    }
+
+    .search input {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .movie-carousel img {
+        height: 450px;
+    }
+
+    .movie-carousel .carousel-caption {
+        left: 30px;
+        bottom: 80px;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .hero-text p {
+        width: 80%;
+    }
+}

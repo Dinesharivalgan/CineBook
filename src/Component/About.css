@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap');
+
+.about-section-wrapper {
+  font-family: 'DM Sans', sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.as-hero {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  text-align: center;
+  padding: 72px 24px 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.as-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 200, 0, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.as-hero-badge {
+  display: inline-block;
+  background: rgba(255, 200, 0, 0.15);
+  border: 1px solid rgba(255, 200, 0, 0.4);
+  color: #ffc800;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.as-hero-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(26px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.as-highlight {
+  color: #ffc800;
+}
+
+.as-hero-sub {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── STATS ── */
+.as-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 28px 16px;
+  flex-wrap: wrap;
+}
+
+.as-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 32px;
+  gap: 4px;
+}
+
+.as-stat-num {
+  font-family: 'Sora', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #302b63;
+}
+
+.as-stat-label {
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+.as-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: #e0e0e0;
+}
+
+/* ── FEATURES ── */
+.as-features-wrap {
+  padding: 64px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.as-section-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(20px, 3.5vw, 32px);
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #1a1a1a;
+}
+
+.as-section-sub {
+  font-size: 15px;
+  color: #777;
+  margin: 0 0 40px;
+}
+
+.as-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.as-feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ececec;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.as-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(48, 43, 99, 0.12);
+}
+
+.as-feature-icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.as-feature-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #1a1a1a;
+}
+
+.as-feature-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── CUSTOMER CARE ── */
+.as-care-wrap {
+  padding: 0 24px 64px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.as-care-card {
+  background: linear-gradient(135deg, #0f0c29, #302b63);
+  border-radius: 20px;
+  padding: 48px 40px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.as-care-left {
+  flex: 1;
+  min-width: 260px;
+}
+
+.as-care-badge {
+  display: inline-block;
+  background: rgba(255, 200, 0, 0.15);
+  border: 1px solid rgba(255, 200, 0, 0.4);
+  color: #ffc800;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.as-care-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.as-care-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.as-care-contacts {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.as-care-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.as-care-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.as-phone {
+  background: #ffc800;
+  color: #1a1a1a;
+}
+
+.as-email {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.as-contact-page-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-top: 4px;
+}
+
+.as-contact-page-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.as-care-right {
+  flex: 0 0 auto;
+}
+
+.as-care-hours {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 220px;
+}
+
+.as-hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.as-hours-row strong {
+  color: #ffc800;
+  font-weight: 700;
+}
+
+/* ── DOWNLOAD ── */
+.as-download {
+  background: #fff;
+  text-align: center;
+  padding: 64px 24px;
+  border-top: 1px solid #ececec;
+}
+
+.as-download-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(20px, 3.5vw, 30px);
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.as-download-sub {
+  font-size: 15px;
+  color: #888;
+  margin: 0 0 32px;
+}
+
+.as-download-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.as-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.as-dl-btn:hover {
+  background: #302b63;
+  transform: translateY(-3px);
+}
+
+.as-dl-btn small {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.as-dl-icon {
+  font-size: 24px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .as-stat { padding: 12px 20px; }
+  .as-stat-divider { display: none; }
+  .as-care-card { padding: 32px 24px; }
+  .as-care-hours { min-width: unset; width: 100%; }
+}
+/* ── FIX: CUSTOMER CARE ALIGNMENT ── */
+
+.as-care-card {
+  align-items: stretch; /* equal height */
+}
+
+/* Left & Right properly stack */
+.as-care-left,
+.as-care-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Contact buttons alignment */
+.as-care-contacts {
+  justify-content: flex-start;
+}
+
+/* Hours box full alignment */
+.as-care-hours {
+  width: 100%;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .as-care-card {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .as-care-left,
+  .as-care-right {
+    width: 100%;
+  }
+
+  .as-care-contacts {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .as-care-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .as-hours-row {
+    font-size: 13px;
+  }
+}

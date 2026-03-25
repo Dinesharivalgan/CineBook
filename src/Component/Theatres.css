@@ -1,0 +1,162 @@
+/* General Container */
+.theatre-container {
+  padding: 30px;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a23;
+  min-height: 100vh;
+}
+
+/* Theatre List */
+.theatre-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.theatre-card {
+  flex: 1 1 200px;
+  background: #1a1a3a;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.theatre-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px #e124e4;
+  background: #2a2a50;
+}
+
+/* Movie Grid */
+.movie-grid {
+  margin-top: 20px;
+}
+
+.movie-grid h2 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Movies Flex Layout */
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Movie Card */
+.card {
+  background: #1a1a3a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #e124e4;
+}
+
+/* Movie Image */
+.card-img-wrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Book Button Overlay */
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.book-btn {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ee1909;
+  color: #1a1a3a;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Movie Info */
+.card-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.meta span {
+  margin-right: 5px;
+  background: #333366;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+/* Show Timing */
+.show-time {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #fa9906;
+  font-weight: bold;
+}
+
+/* Rating */
+.rating-row {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .theatre-list {
+    flex-direction: column;
+  }
+  .movies {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,342 @@
+/* Layout */
+.movie-details-container {
+  background: #03031C;
+  color: white;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.top-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Movie */
+.movie-img {
+  width: 280px;
+  height: 380px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+/* Seat Section */
+.seat-section {
+  flex: 1;
+}
+
+/* Screen */
+.screen {
+  width: 50%;
+  height: 20px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background: linear-gradient(to right, #666, #ddd, #666);
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  line-height: 25px;
+}
+
+/* Wrapper */
+.seat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+/* Row */
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Row label */
+.row-label {
+  width: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Seat */
+.seat {
+  width: 32px;
+  height: 28px;
+  border-radius: 6px 6px 3px 3px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.seat::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 70%;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+}
+
+.seat:hover {
+  transform: scale(1.2);
+}
+
+.seat-num {
+  font-size: 10px;
+}
+
+/* Types */
+.normal  { background: #555; }
+.family  { background:  #d7411b; width: 40px; }
+.couple  { background: #ff2e93; }
+.premium { background: #6a65f1; }
+.selected { background: #ffc107cc !important; color: black; }
+.booked  { background: #adacac !important; cursor: not-allowed; opacity: 0.4; }
+
+/* Legend */
+.legend {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.box { width: 16px; height: 16px; display: inline-block; }
+.box.premium { background: #6a65f1; }
+.box.couple  { background: #ff2e93; }
+.box.family  { background: #d7411b; }
+.box.normal  { background: #555; }
+
+/* Summary */
+.summary {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* Payment */
+.payment-box {
+  margin-top: 15px;
+}
+
+.payment-box input {
+  width: 30%;
+  margin: 5px 0;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.payment-box .row {
+  display: flex;
+  gap: 10px;
+  width: 30%;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.book-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #e50914;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+.back-btn {
+  margin-top: 25px;
+  padding: 8px 15px;
+  background: #444;
+  border: none;
+  color: white;
+  border-radius: 6px;
+}
+
+
+/* ============================================
+   RESPONSIVE — MOBILE (≤ 480px)
+   ============================================ */
+@media (max-width: 480px) {
+
+  .movie-details-container {
+    padding: 12px;
+    overflow-x: hidden; /* ✅ horizontal scroll இல்லாமல் */
+  }
+
+  .top-section {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .movie-img {
+    width: 140px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Seat section மட்டும் scroll ஆகும் */
+  .seat-section {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .seat-wrapper {
+    gap: 3px;
+    min-width: max-content; /* ✅ seats wrap ஆகாமல் */
+  }
+
+  .seat-row {
+    gap: 3px;
+  }
+
+  .seat {
+    width: 20px;
+    height: 17px;
+    font-size: 7px;
+    border-radius: 4px 4px 2px 2px;
+  }
+
+  .family {
+    width: 26px;
+  }
+
+  .seat-num {
+    font-size: 6px;
+  }
+
+  .row-label {
+    font-size: 10px;
+    width: 16px;
+  }
+
+  .screen {
+    width: 85%;
+    height: 18px;
+    font-size: 9px;
+    line-height: 18px;
+  }
+
+  .legend {
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .summary {
+    font-size: 11px;
+  }
+
+  .payment-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .payment-box input {
+    font-size: 12px;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .payment-box .row {
+    flex-direction: column; /* ✅ expiry & CVV stack */
+    gap: 0;
+  }
+
+  .book-btn,
+  .back-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+}
+
+
+/* ============================================
+   RESPONSIVE — TABLET (481px – 900px)
+   ============================================ */
+@media (min-width: 481px) and (max-width: 900px) {
+
+  .movie-details-container {
+    padding: 20px;
+    overflow-x: hidden;
+  }
+
+  .top-section {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .movie-img {
+    width: 200px;
+    height: 280px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .seat-section {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .seat-wrapper {
+    gap: 4px;
+    min-width: max-content;
+  }
+
+  .seat-row {
+    gap: 4px;
+  }
+
+  .seat {
+    width: 26px;
+    height: 22px;
+    font-size: 8px;
+  }
+
+  .family {
+    width: 33px;
+  }
+
+  .screen {
+    width: 72%;
+    height: 21px;
+    font-size: 10px;
+    line-height: 21px;
+  }
+
+  .legend {
+    font-size: 11px;
+  }
+
+  .summary {
+    font-size: 12px;
+  }
+
+  .payment-box input {
+    box-sizing: border-box;
+  }
+
+  .book-btn,
+  .back-btn {
+    width: 100%;
+    padding: 9px 0;
+    font-size: 13px;
+  }
+}
