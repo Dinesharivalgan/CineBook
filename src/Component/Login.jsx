@@ -8,10 +8,10 @@ function Login() {
       <GoogleLogin
         onSuccess={credentialResponse => {
           console.log(credentialResponse);
-          alert("Google Login Successful ✅");
+          alert("Google Login Successful ");
         }}
         onError={() => {
-          alert("Google Login Failed ❌");
+          alert("Google Login Failed ");
         }}
       />
     </div>

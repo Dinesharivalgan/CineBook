@@ -17,8 +17,7 @@ function About() {
   return (
     <div id="about-section" className="about-section-wrapper">
 
-      {/* Hero */}
-      <div className="as-hero">
+            <div className="as-hero">
         <span className="as-hero-badge">🎥 About CineBook</span>
         <h2 className="as-hero-title">
           Your City's <span className="as-highlight">Cinema</span> Companion
@@ -29,7 +28,7 @@ function About() {
         </p>
       </div>
 
-      {/* Stats */}
+      
       <div className="as-stats">
         <div className="as-stat">
           <span className="as-stat-num">100+</span>
@@ -52,7 +51,7 @@ function About() {
         </div>
       </div>
 
-      {/* Features */}
+  
       <div className="as-features-wrap">
         <h3 className="as-section-title">Why Choose CineBook?</h3>
         <p className="as-section-sub">Everything you need for the perfect movie experience</p>
@@ -67,7 +66,7 @@ function About() {
         </div>
       </div>
 
-      {/* Customer Care */}
+      
       <div className="as-care-wrap">
         <div className="as-care-card">
           <div className="as-care-left">
@@ -104,7 +103,7 @@ function About() {
         </div>
       </div>
 
-      {/* Download */}
+      
       <div className="as-download">
         <h3 className="as-download-title">Get the App — It's Free</h3>
         <p className="as-download-sub">Book smarter. Watch better.</p>

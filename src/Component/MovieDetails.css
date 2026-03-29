@@ -1,4 +1,4 @@
-/* Layout */
+
 .movie-details-container {
   background: #03031C;
   color: white;
@@ -13,7 +13,7 @@
   flex-wrap: wrap;
 }
 
-/* Movie */
+
 .movie-img {
   width: 280px;
   height: 380px;
@@ -21,12 +21,11 @@
   margin: 15px 0;
 }
 
-/* Seat Section */
+
 .seat-section {
   flex: 1;
 }
 
-/* Screen */
 .screen {
   width: 50%;
   height: 20px;
@@ -39,7 +38,7 @@
   line-height: 25px;
 }
 
-/* Wrapper */
+
 .seat-wrapper {
   display: flex;
   flex-direction: column;
@@ -47,14 +46,12 @@
   align-items: center;
 }
 
-/* Row */
 .seat-row {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-/* Row label */
 .row-label {
   width: 20px;
   text-align: center;
@@ -62,7 +59,7 @@
   color: #aaa;
 }
 
-/* Seat */
+
 .seat {
   width: 32px;
   height: 28px;
@@ -82,7 +79,7 @@
   bottom: -4px;
   width: 70%;
   height: 4px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 2px;
 }
 
@@ -94,15 +91,14 @@
   font-size: 10px;
 }
 
-/* Types */
+
 .normal  { background: #555; }
-.family  { background:  #d7411b; width: 40px; }
+.family  { background: #d7411b; width: 40px; }
 .couple  { background: #ff2e93; }
 .premium { background: #6a65f1; }
 .selected { background: #ffc107cc !important; color: black; }
 .booked  { background: #adacac !important; cursor: not-allowed; opacity: 0.4; }
 
-/* Legend */
 .legend {
   margin-top: 15px;
   display: flex;
@@ -117,42 +113,218 @@
 .box.family  { background: #d7411b; }
 .box.normal  { background: #555; }
 
-/* Summary */
+
 .summary {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
-/* Payment */
+
 .payment-box {
-  margin-top: 15px;
+  margin-top: 20px;
+  background: #0d0d2b;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 420px;
+}
+.payment-box:hover{
+  transform: translateY(-2);
+  box-shadow: 0px,12px,20px rgb(168, 93, 239);
 }
 
-.payment-box input {
-  width: 30%;
-  margin: 5px 0;
-  padding: 7px;
-  border-radius: 5px;
-  border: none;
-  box-sizing: border-box;
+.payment-box h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  color: #ffc800;
 }
 
-.payment-box .row {
+
+.payment-tabs {
   display: flex;
   gap: 10px;
-  width: 30%;
-  margin: 5px 0;
+  margin-bottom: 18px;
 }
 
-/* Buttons */
+.tab-btn {
+  flex: 1;
+  padding: 9px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+
+.tab-btn.active {
+  background: #302b63;
+  border-color: #6a65f1;
+  color: #fff;
+}
+
+.tab-btn:hover:not(.active) {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.card-form input:focus {
+  border-color: #6a65f1;
+}
+
+.card-form input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+}
+
+.card-row input {
+  flex: 1;
+}
+
+
+.upi-logos {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.upi-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.upi-logo-item:hover {
+  transform: translateY(-3px);
+}
+
+.upi-logo-item span {
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+}
+
+.upi-logo-item svg {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.upi-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin: 0 0 8px;
+}
+
+.upi-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.upi-input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.upi-input:focus {
+  border-color: #00BAF2;
+}
+
+.upi-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.pay-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 0;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+  letter-spacing: 0.3px;
+  
+}
+
+.card-pay-btn {
+  background: linear-gradient(135deg, #8e82e6, #8f8fdf);
+  color: #fff;
+}
+
+.card-pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204, 25, 231, 0.973);
+}
+
+.upi-pay-btn {
+  background: linear-gradient(135deg, #00529B, #00BAF2);
+  color: #fff;
+}
+
+.upi-pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,186,242,0.4);
+}
+
+
 .book-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
+  margin-top: 16px;
+  padding: 12px 28px;
   background: #e50914;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
 }
+
+.book-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(229,9,20,0.5);
+}
+
 
 .back-btn {
   margin-top: 25px;
@@ -161,17 +333,19 @@
   border: none;
   color: white;
   border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
+.back-btn:hover {
+  background: #555;
+}
 
-/* ============================================
-   RESPONSIVE — MOBILE (≤ 480px)
-   ============================================ */
 @media (max-width: 480px) {
 
   .movie-details-container {
     padding: 12px;
-    overflow-x: hidden; /* ✅ horizontal scroll இல்லாமல் */
+    overflow-x: hidden;
   }
 
   .top-section {
@@ -187,7 +361,6 @@
     margin: 0 auto;
   }
 
-  /* Seat section மட்டும் scroll ஆகும் */
   .seat-section {
     width: 100%;
     overflow-x: auto;
@@ -196,7 +369,7 @@
 
   .seat-wrapper {
     gap: 3px;
-    min-width: max-content; /* ✅ seats wrap ஆகாமல் */
+    min-width: max-content;
   }
 
   .seat-row {
@@ -236,24 +409,33 @@
   }
 
   .summary {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .payment-box {
-    width: 100%;
+    max-width: 100%;
+    padding: 14px;
     box-sizing: border-box;
   }
 
-  .payment-box input {
+  .card-form input,
+  .upi-input {
     font-size: 12px;
-    padding: 6px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 8px 10px;
   }
 
-  .payment-box .row {
-    flex-direction: column; /* ✅ expiry & CVV stack */
-    gap: 0;
+  .card-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .upi-logos {
+    gap: 10px;
+  }
+
+  .upi-logo-item svg {
+    width: 36px;
+    height: 36px;
   }
 
   .book-btn,
@@ -261,14 +443,10 @@
     width: 100%;
     padding: 10px 0;
     font-size: 13px;
-    margin-top: 8px;
+    margin-top: 10px;
   }
 }
 
-
-/* ============================================
-   RESPONSIVE — TABLET (481px – 900px)
-   ============================================ */
 @media (min-width: 481px) and (max-width: 900px) {
 
   .movie-details-container {
@@ -326,17 +504,18 @@
   }
 
   .summary {
-    font-size: 12px;
+    font-size: 13px;
   }
 
-  .payment-box input {
+  .payment-box {
+    max-width: 100%;
     box-sizing: border-box;
   }
 
   .book-btn,
   .back-btn {
     width: 100%;
-    padding: 9px 0;
-    font-size: 13px;
+    padding: 10px 0;
+    font-size: 14px;
   }
 }

@@ -15,9 +15,9 @@ function HomePage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY); // debug
+      console.log(window.scrollY);
 
-      if (window.scrollY > 50) {
+      if (window.scrollY > 30) {
         setShowNav(true);
       } else {
         setShowNav(false);
@@ -43,7 +43,7 @@ function HomePage() {
   return (
     <div>
 
-      {/* NAV */}
+      
       <div className={`nav ${showNav ? "show" : "hide"}`}>
         <div className='logo'>
           <img src={logo} alt="logo" style={{ height: '40px' }} />
@@ -61,11 +61,11 @@ function HomePage() {
           <a href='#' onClick={scrollToAbout}>About Us</a>
           <a href='#' onClick={(e) => { e.preventDefault(); navigate("/contact"); }}>Contact Us</a>
           <Button className='button' onClick={() => navigate("/login")}>Login</Button>
-          <Button className='button'>Signup</Button>
+          <Button className='button'onClick={()=>navigate("/login")}>Signup</Button>
         </div>
       </div>
 
-      {/* MAIN */}
+      
       <div className='main'>
         <Carousel className="movie-carousel">
           {carouselMovies.map((movie, index) => (
@@ -74,7 +74,7 @@ function HomePage() {
               <Carousel.Caption className="hero-text">
                 <h1>{movie.title}</h1>
                 <p>{movie.desc}</p>
-                <button className="ticket-btn" onClick={() => navigate(`/movie/${index}`)}>
+                <button className="ticket-btn" onClick={() => navigate("/movie")}>
                   Book Ticket
                 </button>
               </Carousel.Caption>

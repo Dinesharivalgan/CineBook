@@ -1,4 +1,4 @@
-// Theatres.js
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { movies } from './MovieList';
@@ -83,7 +83,7 @@ function Theatres() {
                   <div className="rating-row">
                     <span>★ {movie.rating} / 10</span>
                   </div>
-                  {/* Show timing */}
+                 
                   {movie.show && (
                     <div className="show-time">
                       <b>{movie.show.label}:</b> {movie.show.time}
