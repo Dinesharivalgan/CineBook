@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/CineBook/static/css/main.38d3bc66.css",
+    "main.js": "/CineBook/static/js/main.75039138.js",
+    "static/js/453.0ad922c8.chunk.js": "/CineBook/static/js/453.0ad922c8.chunk.js",
+    "static/media/The Dark Knight.jpg": "/CineBook/static/media/The Dark Knight.fdd0b28606ecc4702bbf.jpg",
+    "static/media/jananayagan.jpg": "/CineBook/static/media/jananayagan.b27d4914d16cd41d2918.jpg",
+    "static/media/naraniya.jpg": "/CineBook/static/media/naraniya.f1503da66fb7845494e0.jpg",
+    "static/media/kolaiseval.jpg": "/CineBook/static/media/kolaiseval.908321501a971d39cc81.jpg",
+    "static/media/CineBook logo.png": "/CineBook/static/media/CineBook logo.fa11d147fda083e692a2.png",
+    "static/media/avenger-2.jpg": "/CineBook/static/media/avenger-2.442a5354beaec90c6b0b.jpg",
+    "static/media/joker.jpg": "/CineBook/static/media/joker.74788cac3808791278b1.jpg",
+    "static/media/kill bill.jpg": "/CineBook/static/media/kill bill.3ca96f467472c1be5b46.jpg",
+    "static/media/dhurandhar.webp": "/CineBook/static/media/dhurandhar.5cf6441e61a46f8c843c.webp",
+    "static/media/thaai kizhavi.webp": "/CineBook/static/media/thaai kizhavi.f25d19891caa6c582b09.webp",
+    "static/media/once upon a time.webp": "/CineBook/static/media/once upon a time.267db9a336e631e06a9c.webp",
+    "static/media/withlove.webp": "/CineBook/static/media/withlove.9565296dc30d037dc675.webp",
+    "static/media/F1.webp": "/CineBook/static/media/F1.61299c7334086513a069.webp",
+    "static/media/thalapathi.jpeg": "/CineBook/static/media/thalapathi.784665d8a0b2e33ff6a1.jpeg",
+    "index.html": "/CineBook/index.html",
+    "main.38d3bc66.css.map": "/CineBook/static/css/main.38d3bc66.css.map",
+    "main.75039138.js.map": "/CineBook/static/js/main.75039138.js.map",
+    "453.0ad922c8.chunk.js.map": "/CineBook/static/js/453.0ad922c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38d3bc66.css",
+    "static/js/main.75039138.js"
+  ]
+}
